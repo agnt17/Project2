@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        *,
+        body {
+            font-family: Mulish, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-weight: 400;
+        }
+
+        .heart {
+            height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader span {
+            display: inline-block;
+            -webkit-animation: pulse .5s ease-in-out infinite alternate;
+            animation: pulse .5s ease-in-out infinite alternate;
+        }
+
+        .loader span:nth-child(odd) {
+            -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+        }
+
+        @-webkit-keyframes pulse {
+            to {
+                transform: scale(.8);
+                opacity: .7;
+            }
+        }
+
+        @keyframes pulse {
+            to {
+                transform: scale(.8);
+                opacity: .7;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CODES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">DSA</a></li>
+                            <li><a class="dropdown-item" href="#">DEVELOPMENT</a></li>
+                            <!-- <li><hr class="dropdown-divider"></li> -->
+                            <li><a class="dropdown-item" href="#">OS</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Contribute</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            style="margin-right: 2px;">
+            Login
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="LoginModalLabel">Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="exampleInputName1"
+                                    aria-describedby="nameHelp">
+                                <div id="nameHelp" class="form-text">Enter Your Name</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Signup
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Signup</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="exampleInputName1"
+                                    aria-describedby="nameHelp">
+                                <div id="nameHelp" class="form-text">Enter Your Name</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container" style="background-color: #4600e7; height: 50vh; width: 100vw;">
+
+        <div _ngcontent-serverapp-c199="">
+            <landing-about-v3-top-section _ngcontent-serverapp-c199="" _nghost-serverapp-c193="">
+                <div _ngcontent-serverapp-c193="" class="container zen-grid-section-v2 pt-32">
+                    <div _ngcontent-serverapp-c193="" class="left-section mr-32">
+                        <div _ngcontent-serverapp-c193="" class="left-section mr-32"><div _ngcontent-serverapp-c193="" class="heading mb-20">The platform for the next billion students</div><div _ngcontent-serverapp-c193="" class="subheading"> Transforming tech education for the next generation of developers </div></div>
+                    </div>
+                    <div _ngcontent-serverapp-c193="" class="right-section"><img _ngcontent-serverapp-c193="" src=""
+                            alt=""></div>
+                    <!---->
+                    <div _ngcontent-serverapp-c193="" class="polygons"><img _ngcontent-serverapp-c193=""
+                            src="https://files.codingninjas.com/mask-group-1-9314.svg" alt=""></div>
+                    <div _ngcontent-serverapp-c193="" class="gradient"><img _ngcontent-serverapp-c193=""
+                            src="https://files.codingninjas.com/gradient-9316.svg" alt=""></div>
+                    <div _ngcontent-serverapp-c193="" class="graphics"><img _ngcontent-serverapp-c193=""
+                            src="https://files.codingninjas.com/group-4235-9317.svg" alt=""></div>
+                    <!---->
+                </div>
+            </landing-about-v3-top-section>
+        </div>
+    </div>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" class="img-fluid">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+              <img src="https://source.unsplash.com/2000x500/?coffee,laptop" class="img-fluid" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block" style="color: rgb(255, 255, 255);">
+                <h5 >Our Achievements</h5>
+                <p>.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://source.unsplash.com/2000x400/?coffee,code" class="img-fluid" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" style="color: rgb(255, 255, 255);">
+                <h5>Our Alumuni</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="https://source.unsplash.com/2000x700/?code,laptop" class="img-fluid" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" style="color: rgb(255, 255, 255);">
+                <h5>Partner Colleges</h5>
+                <div class="container" style="display: flex; justify-content: center;">
+                    <div _ngcontent-serverapp-c194="" class="partner-university"><img _ngcontent-serverapp-c194="" alt="Chitkara University" class="img-fluid" src="https://files.codingninjas.in/chitkara-university-5445.png" class="  ng-lazyloaded"><div _ngcontent-serverapp-c194="" class="university-info pl-8"><div _ngcontent-serverapp-c194="" class="university-name"> Chitkara University </div><div _ngcontent-serverapp-c194="" class="university-location"> Rajpura, Punjab </div></div><!----></div>
+                    
+                </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+        
+        
+        
+        <footer style="background-color:rgb(250, 250, 250) ; height: 12.3vh; color: white; display: flex;justify-content: center; padding-top: 30px ; color: black; ">
+            copyright @CODES
+        </footer>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
